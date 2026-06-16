@@ -1,0 +1,1 @@
+savedcmd_/home/sopes2/Desktop/SOPES2VS12026/Clase10/monitor/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/sopes2/Desktop/SOPES2VS12026/Clase10/monitor/Module.symvers -T /home/sopes2/Desktop/SOPES2VS12026/Clase10/monitor/modules.order -i Module.symvers -e 

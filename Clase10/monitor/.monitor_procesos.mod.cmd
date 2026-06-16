@@ -1,0 +1,1 @@
+savedcmd_/home/sopes2/Desktop/SOPES2VS12026/Clase10/monitor/monitor_procesos.mod := printf '%s\n'   monitor_procesos.o | awk '!x[$$0]++ { print("/home/sopes2/Desktop/SOPES2VS12026/Clase10/monitor/"$$0) }' > /home/sopes2/Desktop/SOPES2VS12026/Clase10/monitor/monitor_procesos.mod
