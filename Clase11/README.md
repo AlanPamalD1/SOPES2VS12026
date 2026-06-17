@@ -1,3 +1,5 @@
+# Clase 11: Manejo de task_struct y comparación RSS vs VSZ
+
 ## Manejo de task_struct
 
 Este modulo de kernel muestra operaciones comunes sobre `task_struct`:
@@ -85,3 +87,22 @@ sudo rmmod task
 ```
 
 ## RSS vs VSZ
+
+- RSS (Resident Set Size): cantidad de memoria física que un proceso está usando actualmente.
+- VSZ (Virtual Memory Size): cantidad total de memoria virtual que un proceso ha reservado,
+
+### Archivo
+
+- `rss_vs_vss.c`: programa en C para comparar RSS y VSZ
+
+### Compilar
+
+```bash
+gcc -o rss_vs_vss rss_vs_vss.c
+```
+
+### Ejecutar
+
+```bash
+./rss_vs_vss
+```
