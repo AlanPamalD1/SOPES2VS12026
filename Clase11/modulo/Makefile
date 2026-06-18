@@ -1,4 +1,4 @@
-obj-m += task.o
+obj-m += monitor_rcu.o
 
 KDIR ?= /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
