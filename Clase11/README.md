@@ -31,7 +31,7 @@ sudo insmod task.ko
 Con parametros:
 
 ```bash
-sudo insmod task.ko target_pid=1 max_tasks=15 show_threads=1
+sudo insmod task.ko target_pid=1
 ```
 
 ### Ver logs del kernel
@@ -73,7 +73,7 @@ pgrep -n bash
 
 2. Cargar modulo con ese PID:
 ```bash
-sudo insmod task.ko target_pid=<PID> max_tasks=10 show_threads=1
+sudo insmod task.ko target_pid=<PID>
 ```
 
 3. Revisar salida:
@@ -105,4 +105,13 @@ gcc -o rss_vs_vss rss_vs_vss.c
 
 ```bash
 ./rss_vs_vss
+```
+
+
+# NOTA
+
+Para instalar smem el cual es una herramienta para reportar el uso de memoria de los procesos, se puede usar el siguiente comando:
+
+```bash
+sudo apt update && sudo apt install smem
 ```
