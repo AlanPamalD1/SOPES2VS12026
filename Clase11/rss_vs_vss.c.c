@@ -4,9 +4,9 @@
 #include <unistd.h>
 
 // Función para parsear el pseudo-archivo /proc/self/status
-void print_memory_info(const char *step) {
+void print_memory_info(const char *step) { //step es un string que indica el paso actual del programa (ej. "Estado Inicial", "Después de malloc", etc.)
     char buffer[256];
-    FILE *fp = fopen("/proc/self/status", "r");
+    FILE *fp = fopen("/proc/self/status", "r"); // Abrimos el archivo de estado del proceso actual
     if (!fp) return;
 
     printf("\n--- %s ---\n", step);
