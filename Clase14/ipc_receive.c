@@ -11,13 +11,18 @@
 int main(void) {
     char buffer[1024 * 1024]; // 1 MiB maximo
 
-    int bytes_received = syscall(SYSCALL_IPC_CHANNEL_RECEIVE, buffer);
-    if (bytes_received < 0) {
-        int e = errno;
-        printf("errno=%d (%s)\n", e, strerror(e));
-        return -1;
-    }
+    printf("Esperando mensajes...\n");
+    while (1) {
+        int bytes_received = syscall(SYSCALL_IPC_CHANNEL_RECEIVE, buffer);
+        if (bytes_received < 0) {
+            int e = errno;
+            printf("errno=%d (%s)\n", e, strerror(e));
+            return -1;
+        }
+    
+        printf("Recibido: %s (%d bytes)\n", buffer, bytes_received);
 
-    printf("Recibido: %s (%d bytes)\n", buffer, bytes_received);
+        sleep(1); // Esperar 1 segundo antes de recibir el siguiente mensaje
+    }
     return 0;
 }
