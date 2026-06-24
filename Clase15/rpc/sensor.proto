@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+// Definimos el servicio RPC
+service TemperatureMonitor {
+  // Un método que recibe la temperatura y devuelve una confirmación
+  rpc ReportTemperature (TemperatureData) returns (AckResponse) {}
+}
+
+// Estructura del mensaje de envío
+message TemperatureData {
+  string device_id = 1;
+  int32 celsius = 2;
+}
+
+// Estructura del mensaje de respuesta
+message AckResponse {
+  bool success = 1;
+  string message = 2;
+}
